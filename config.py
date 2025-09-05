@@ -2,8 +2,7 @@
 # GENERAL SETTINGS
 # -------------------
 DEBUG_PRINT = True
-CARLA_INSTALLATION_PATH = "/media/constantin/ExtraSSDSpace/Testing/Carla"
-#CARLA_INSTALLATION_PATH = "/home/csys/Desktop/CARLA_0.9.15"
+CARLA_INSTALLATION_PATH = "PATH TO CARLA"
 CARLA_GLASS_PATH = "CarlaUE4/Content/Carla/Static/Car/GeneralMaterials/Glass.uasset"
 ASSET_PATH = "assets"
 # -------------------
