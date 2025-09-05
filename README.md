@@ -1,4 +1,4 @@
-# CarlaVisTool
+# Cam2Sim
 
 ## Setup
 
@@ -97,20 +97,11 @@ python create_dataset.py \
 ```
 
 ## 3. Finetuning Models
-To finetune a model, you need to provide the Dataset Name (`dataset`) of the dataset you want to use.
-The script will then finetune a Stable Diffusion Model with lora using the dataset. (images and tags)<br>
-Additionally, a Segmentation Model will be trained using the segmentation masks of the dataset.<br>
-
-Both models will be saved in the `models` directory, with the name of the dataset as the model name<br>
-
+To finetune a model, you need to use the shell script provided, training both ControlNets and Stable Diffusion using the diffusers repository.
+The script will save the model in the `models` directory, with the name of the dataset as the model name.<br>
 The script can be run with the following command:
 ```bash
-python finetune_model.py --dataset "DatasetName"
-```
-
-#### Example:
-```bash
-python finetune_model.py --dataset "guerickestrasse_25_07_01"
+bash train_model.sh /path/to/diffusers <lora_dataset_name> <models_bundle_name>
 ```
 
 ## 4. Starting the Carla Server
